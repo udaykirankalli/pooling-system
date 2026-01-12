@@ -1,0 +1,18 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  /* Make sidebar responsive */
+  .sidebar {
+    width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* Stack role buttons on mobile */
+  .roleButtons {
+    grid-template-columns: 1fr !important;
+  }
+}
+
