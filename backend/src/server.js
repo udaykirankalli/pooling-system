@@ -10,14 +10,11 @@ const setupPollSocket = require('./socket/pollSocket');
 const app = express();
 const server = http.createServer(app);
 const io = socketIO(server, {
-  cors: {
-    origin: process.env.NODE_ENV === 'production' 
-      ? 'your-frontend-url.com' 
-      : 'http://localhost:5173',
+ cors: {
+    origin: process.env.CLIENT_URL,
     methods: ['GET', 'POST']
   }
 });
-
 
 app.use(cors());
 app.use(express.json());
